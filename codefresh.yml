@@ -6,12 +6,11 @@ steps:
     dockerfile: Dockerfile
     image_name: turo/cf-example
   unit_test:
-    image: gradle:4.0-jdk8
+    image: BUILD_IMAGE
     working_directory: ${{main_clone}}
     commands:
       - whoami
-      - sudo whoami
-      - sudo gradle test
+      - gradle test --debug
     on_success:
       metadata:
         set:
