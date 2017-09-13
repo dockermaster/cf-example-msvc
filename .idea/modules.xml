@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cf-example-msvc.iml" filepath="$PROJECT_DIR$/.idea/modules/cf-example-msvc.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cf-example-msvc_main.iml" filepath="$PROJECT_DIR$/.idea/modules/cf-example-msvc_main.iml" group="cf-example-msvc" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cf-example-msvc_test.iml" filepath="$PROJECT_DIR$/.idea/modules/cf-example-msvc_test.iml" group="cf-example-msvc" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/cf-example-client.iml" filepath="$PROJECT_DIR$/.idea/modules/cf-example-client.iml" group="cf-example-client" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/client/cf-example-client_main.iml" filepath="$PROJECT_DIR$/.idea/modules/client/cf-example-client_main.iml" group="cf-example-client" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/client/cf-example-client_test.iml" filepath="$PROJECT_DIR$/.idea/modules/client/cf-example-client_test.iml" group="cf-example-client" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cf-example-msvc.iml" filepath="$PROJECT_DIR$/.idea/modules/cf-example-msvc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cf-example-msvc_main.iml" filepath="$PROJECT_DIR$/.idea/modules/cf-example-msvc_main.iml" group="cf-example-msvc" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cf-example-msvc_test.iml" filepath="$PROJECT_DIR$/.idea/modules/cf-example-msvc_test.iml" group="cf-example-msvc" />
     </modules>
   </component>
 </project>
