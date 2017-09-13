@@ -10,7 +10,8 @@ steps:
     working_directory: ${{main_clone}}
     commands:
       - whoami
-      - gradle test
+      - sudo whoami
+      - sudo gradle test
     on_success:
       metadata:
         set:
