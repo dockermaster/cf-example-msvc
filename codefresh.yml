@@ -6,7 +6,7 @@ steps:
     dockerfile: Dockerfile
     image_name: turo/cf-example
   unit_test:
-    image: BUILD_IMAGE
+    image: ${{build_docker}}
     working_directory: ${{main_clone}}
     commands:
       - whoami
