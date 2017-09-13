@@ -1,0 +1,51 @@
+version: '1.0'
+steps:
+  unit_test:
+    image: gradle:4.0-jdk8
+    working_directory: ${{main_clone}}
+    commands:
+      - gradle test
+    on_success:
+      metadata:
+        set:
+          - '${{BuildingDockerImage.imageId}}':
+              - CF_QUALITY: true
+    on_fail:
+      metadata:
+        set:
+          - '${{BuildingDockerImage.imageId}}':
+              - CF_QUALITY: false
+  build_jar:
+    image: gradle:4.0-jdk8
+    working_directory: ${{main_clone}}
+    commands:
+      - gradle build -x test
+
+#  BuildingDockerImage:
+#    title: Building Docker Image
+#    type: build
+#    image_name: turo/cf-image-proxy
+#    working_directory: ./
+#    dockerfile: Dockerfile
+#    tag: '${{CF_BRANCH_TAG_NORMALIZED}}'
+#  RunningUnitTests:
+#    title: Running Unit Tests
+#    image: gradle:4.0-jdk8
+#    working_directory: IMAGE_WORK_DIR
+#    entry_point:
+#      - /bin/sh
+#      - /codefresh/volume/cf-generated/unit_test_script
+#    create_file:
+#      path: /codefresh/volume/cf-generated
+#      name: unit_test_script
+#      content: gradle test
+#    on_success:
+#      metadata:
+#        set:
+#          - '${{BuildingDockerImage.imageId}}':
+#              - CF_QUALITY: true
+#    on_fail:
+#      metadata:
+#        set:
+#          - '${{BuildingDockerImage.imageId}}':
+#              - CF_QUALITY: false
