@@ -1,0 +1,4 @@
+rootProject.name = 'cf-example-msvc'
+include 'client'
+findProject(':client')?.name = 'cf-example-client'
+
