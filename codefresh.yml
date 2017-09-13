@@ -4,24 +4,12 @@ steps:
     type: build
     description: Free text description
     dockerfile: Dockerfile
-    image_name: turo/cf-example
+    image_name: dockermaster/cf-example
   unit_test:
     image: ${{build_docker}}
     working_directory: ${{main_clone}}
     commands:
       - whoami
-      - gradle test --debug
-    on_success:
-      metadata:
-        set:
-          - '${{build_docker.imageId}}':
-              - CF_QUALITY: true
-    on_fail:
-      metadata:
-        set:
-          - '${{build_docker.imageId}}':
-              - CF_QUALITY: false
-
 
 #  BuildingDockerImage:
 #    title: Building Docker Image
